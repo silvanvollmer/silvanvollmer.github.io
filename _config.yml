@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "silvanvollmer.github.io/files/Silvan-Vollmer-71x96.jpg"
   name             : ""
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Statistics"
