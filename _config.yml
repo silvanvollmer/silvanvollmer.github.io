@@ -26,7 +26,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Statistics"
   location         : "Copenhagen"
-  employer         : "Københavns Universitet"
+  employer         : ["Københavns Universitet"](https://www.ku.dk/english/)
   uri              : # URL
 
   # Academic websites
