@@ -258,7 +258,7 @@ defaults:
       path: ""
       type: contact
     values:
-      layout: talk
+      layout: single
       author_profile: true
       share: true
 
