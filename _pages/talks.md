@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: ""
+title: "I am curious to hear from you"
 permalink: /contact/
 author_profile: true
 ---
