@@ -25,7 +25,7 @@ author:
   name             : ""
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Statistics"
-  location         : [Copenhagen](https://www.google.com/maps/place/Department+of+Mathematical+Sciences,+Universitetsparken+5,+2100+K%C3%B8benhavn,+D%C3%A4nemark/@55.7004032,12.558061,17z/data=!3m1!4b1!4m6!3m5!1s0x465252566558881f:0xe730ab5aef60c580!8m2!3d55.7004002!4d12.5606359!16s%2Fg%2F11cmhrbljw?entry=ttu) 
+  location         : "https://www.google.com/maps/place/Department+of+Mathematical+Sciences,+Universitetsparken+5,+2100+K%C3%B8benhavn,+D%C3%A4nemark/@55.7004032,12.558061,17z/data=!3m1!4b1!4m6!3m5!1s0x465252566558881f:0xe730ab5aef60c580!8m2!3d55.7004002!4d12.5606359!16s%2Fg%2F11cmhrbljw?entry=ttu" 
   employer         : "Københavns Universitet"
   uri              : # URL
 
