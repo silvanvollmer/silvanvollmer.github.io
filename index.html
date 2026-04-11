@@ -189,11 +189,61 @@
       color: var(--muted);
       font-size: 0.96rem;
     }
-    
+
     .item-meta a {
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+
+    .cv-map-wrap {
+      position: relative;
+      width: 400px;
+      max-width: 100%;
+    }
+
+    .cv-map-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    .cv-map-wrap .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    }
+
+    .cv-map-wrap .tooltip {
+      position: absolute;
+      left: 50%;
+      bottom: 150%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.88);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s ease;
+      z-index: 3;
+    }
+
+    .cv-map-wrap .dot:hover .tooltip {
+      opacity: 1;
+    }
+
+    .cv-map-wrap .freiburg   { left: 40%; top: 70%; }
+    .cv-map-wrap .koeln      { left: 30%; top: 57%; }
+    .cv-map-wrap .zurich     { left: 40%; top: 80%; }
+    .cv-map-wrap .copenhagen { left: 55%; top: 30%; }
 
     footer {
       padding: 20px 0 48px;
@@ -313,9 +363,9 @@
         <div class="section-head">
           <h2>Talks & Posters</h2>
           <div class="section-note"></div>
-          </div>
-          <ul class="clean-list">
-            <li>
+        </div>
+        <ul class="clean-list">
+          <li>
             <div class="item-title">
               Talk:
               <a href="https://www.youtube.com/watch?v=SDXaJHzZW6M" target="_blank" rel="noopener noreferrer">
@@ -333,7 +383,7 @@
               <br>
               <a href="https://www.newton.ac.uk/event/cifw02/" target="_blank" rel="noopener noreferrer">
                 CIFW02 workshop
-              </a> 
+              </a>
               · Isaac Newton Institute
               · University of Cambridge
               · Cambridge
@@ -342,50 +392,63 @@
               <a href="https://causalinferencelab.com/about/" target="_blank" rel="noopener noreferrer">
                 Causal Inference Lab
               </a>
-             · TU Berlin
+              · TU Berlin
               · Berlin
               · Feb 2026
-              </div>
-              </li>
-              
-              <li>
-                <div class="item-title">
-                  Poster:
-                  <a href="files/SPICE_EurIPS_poster.pdf" target="_blank" rel="noopener noreferrer">
-                    Single Proxy Identifiability of Causal Effect
-                  </a>
-                </div>
-                <div class="item-meta">
-                  <a href="https://eurips.cc" target="_blank" rel="noopener noreferrer">
-                    EurIPS 2025
-                  </a> ·
-                  <a href="https://impact-25.causal.dev/" target="_blank" rel="noopener noreferrer">
-                    Causality for Impact workshop
-                  </a>
-                  · Copenhagen
-                  · Dec 2025
-                </div>
-            </li>
+            </div>
+          </li>
+
+          <li>
+            <div class="item-title">
+              Poster:
+              <a href="files/SPICE_EurIPS_poster.pdf" target="_blank" rel="noopener noreferrer">
+                Single Proxy Identifiability of Causal Effect
+              </a>
+            </div>
+            <div class="item-meta">
+              <a href="https://eurips.cc" target="_blank" rel="noopener noreferrer">
+                EurIPS 2025
+              </a>
+              ·
+              <a href="https://impact-25.causal.dev/" target="_blank" rel="noopener noreferrer">
+                Causality for Impact workshop
+              </a>
+              · Copenhagen
+              · Dec 2025
+            </div>
+          </li>
         </ul>
       </div>
     </section>
 
-   <section id="cv">
+    <section id="cv">
       <div class="container">
         <div class="section-head">
           <h2>CV</h2>
           <div class="section-note"></div>
         </div>
-    
-        <iframe
-          src="cv/cv-map.html"
-          title="CV"
-          style="width: 400px; max-width: 100%; height: 400px; border: none; display: block; overflow: hidden;"
-          loading="lazy">
-        </iframe>
+
+        <div class="cv-map-wrap">
+          <img src="cv/europe.svg" alt="Europe map" class="cv-map-image" />
+
+          <div class="dot freiburg">
+            <span class="tooltip">Freiburg — add text</span>
+          </div>
+
+          <div class="dot koeln">
+            <span class="tooltip">Köln — add text</span>
+          </div>
+
+          <div class="dot zurich">
+            <span class="tooltip">Zürich — add text</span>
+          </div>
+
+          <div class="dot copenhagen">
+            <span class="tooltip">København — add text</span>
+          </div>
+        </div>
       </div>
     </section>
-    
   </main>
 
   <footer>
