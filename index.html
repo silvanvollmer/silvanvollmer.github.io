@@ -6,13 +6,13 @@
   <title>Silvan Vollmer</title>
   <style>
     :root {
-      --bg: #0b0b0d;
-      --panel: #121217;
-      --text: #f3f4f6;
-      --muted: #a1a1aa;
-      --line: #27272a;
-      --accent: #fafafa;
-    }
+    --bg: #ffffff;
+    --panel: #f4f4f5;
+    --text: #111111;
+    --muted: #52525b;
+    --line: #d4d4d8;
+    --accent: #111111;
+  }
 
     * {
       box-sizing: border-box;
@@ -94,6 +94,10 @@
       max-width: 56ch;
       font-size: 1.06rem;
     }
+    .lead a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    }
 
     .button-row,
     .link-grid {
@@ -117,6 +121,38 @@
       transform: translateY(-1px);
       border-color: #3f3f46;
       background: #18181d;
+    }
+
+    .icon-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .icon-link {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 999px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .icon-link:hover {
+      transform: translateY(-1px);
+      border-color: #3f3f46;
+      background: #18181d;
+    }
+
+    .icon-link img {
+      width: 20px;
+      height: 20px;
+      border-radius: 0;
+      opacity: 0.92;
     }
 
     .photo-wrap {
@@ -194,15 +230,20 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Research · Publications · Talks</div>
-          <h1>Silvan Vollmer</h1>
+          <div class="eyebrow">Hi there, I am </div>
+          <h1 style="font-size: 3rem;">Silvan Vollmer.</h1>
           <p class="lead">
             Add a short introduction here. This should be 2–4 sentences about who you are,
             your current position, and the topics you work on.
           </p>
           <p class="lead">
-            Example research interests: machine learning, computational neuroscience,
-            scientific computing, human-computer interaction, or your own field.
+            I am a PhD Candidate in Statistics at the <a href="https://cocala.github.io/" target="_blank" rel="noopener noreferrer">Copenhagen Causality Lab</a> 
+            of the <a href="https://www.math.ku.dk/english/research/spt/cocala/" target="_blank" rel="noopener noreferrer">University of Copenhagen</a> under the 
+            supervision of
+            <a href="https://sweichwald.de/" target="_blank" rel="noopener noreferrer">Sebastian Weichwald</a> and
+            <a href="https://niklaspfister.github.io/" target="_blank" rel="noopener noreferrer">Niklas Pfister</a>. I am very much interested in causal inference methods 
+            and their application to real-world data. I am working on identifying and estimating causal effects under unobserved confounding using proxy variables. 
+            If this topic interests you, do not hesitate to reach out to me!
           </p>
 
           <div class="button-row" style="margin-top: 24px;">
@@ -211,12 +252,22 @@
             <a class="button" href="#talks">Talks & Posters</a>
           </div>
 
-          <div class="link-grid" style="margin-top: 18px;">
-            <a class="social-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a class="social-link" href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID</a>
-            <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="social-link" href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv</a>
-            <a class="social-link" href="https://github.com/silvanvollmer" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <div class="icon-links" aria-label="External links">
+            <a class="icon-link" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+              <img src="icons/google-scholar.svg" alt="Google Scholar" />
+            </a>
+            <a class="icon-link" href="https://orcid.org/" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID">
+              <img src="icons/orcid.svg" alt="ORCID" />
+            </a>
+            <a class="icon-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+              <img src="icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a class="icon-link" href="https://arxiv.org/" target="_blank" rel="noopener noreferrer" aria-label="arXiv" title="arXiv">
+              <img src="icons/arxiv.svg" alt="arXiv" />
+            </a>
+            <a class="icon-link" href="https://github.com/silvanvollmer" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <img src="icons/github.svg" alt="GitHub" />
+            </a>
           </div>
         </div>
 
