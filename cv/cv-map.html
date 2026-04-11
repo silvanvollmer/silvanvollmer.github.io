@@ -8,16 +8,18 @@
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
       background: transparent;
       overflow: hidden;
       font-family: Arial, sans-serif;
     }
 
+    body {
+      display: inline-block;
+    }
+
     .map-wrap {
       position: relative;
-      width: 600px;
-      max-width: 100%;
+      width: 560px;
       margin: 0;
     }
 
@@ -52,6 +54,7 @@
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.18s ease;
+      z-index: 3;
     }
 
     .dot:hover .tooltip {
@@ -72,29 +75,6 @@
     <div class="dot koeln"><span class="tooltip">Köln — add text</span></div>
     <div class="dot zurich"><span class="tooltip">Zürich — add text</span></div>
     <div class="dot copenhagen"><span class="tooltip">København — add text</span></div>
-  </div>
-</body>
-</html>  </style>
-</head>
-<body>
-  <div class="map-wrap">
-    <img src="europe.svg" alt="Europe map" />
-
-    <div class="dot freiburg">
-      <span class="tooltip">Freiburg — add text</span>
-    </div>
-
-    <div class="dot koeln">
-      <span class="tooltip">Köln — add text</span>
-    </div>
-
-    <div class="dot zurich">
-      <span class="tooltip">Zürich — add text</span>
-    </div>
-
-    <div class="dot copenhagen">
-      <span class="tooltip">København — add text</span>
-    </div>
   </div>
 </body>
 </html>
