@@ -184,7 +184,10 @@
       text-decoration: underline;
       text-underline-offset: 3px;
     }
-
+    .cv-card a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
     .item-meta {
       color: var(--muted);
       font-size: 0.96rem;
@@ -238,14 +241,27 @@
     background: white;
     border: none;
     padding: 0;
+    margin: 0;
     appearance: none;
+    -webkit-appearance: none;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
     z-index: 2;
+    display: block;
+    font-size: 0;
+    line-height: 0;
   }
-  
+  .cv-map-wrap .dot:focus {
+    outline: none;
+  }
+
+  .cv-map-wrap .dot::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+    
   .cv-map-wrap .dot:hover,
   .cv-map-wrap .dot.active {
     transform: translate(-50%, -50%) scale(1.15);
@@ -272,10 +288,10 @@
     opacity: 1;
   }
   
-  .cv-map-wrap .freiburg   { left: 40%; top: 67%; }
+  .cv-map-wrap .freiburg   { left: 40%; top: 73%; }
   .cv-map-wrap .koeln      { left: 36%; top: 56%; }
-  .cv-map-wrap .zurich     { left: 40%; top: 72%; }
-  .cv-map-wrap .copenhagen { left: 50%; top: 32%; }
+  .cv-map-wrap .zurich     { left: 41%; top: 76%; }
+  .cv-map-wrap .copenhagen { left: 53%; top: 28%; }
   
   .cv-info {
     min-height: 180px;
@@ -503,38 +519,56 @@
           <span class="tooltip">Freiburg</span>
         </button>
 
-        <button class="dot koeln" type="button" data-city="koeln" aria-label="Köln">
-          <span class="tooltip">Köln</span>
-        </button>
+        <div class="cv-card" id="cv-koeln">
+  <h3>Köln: 2015–2019</h3>
+  <p>
+    I studied Business and Economics for my bachelor’s degree at the
+    <a href="https://uni-koeln.de/en/" target="_blank" rel="noopener noreferrer">
+      University of Cologne
+    </a>.
+  </p>
+</div>
 
-        <button class="dot zurich" type="button" data-city="zurich" aria-label="Zürich">
-          <span class="tooltip">Zürich</span>
-        </button>
+<div class="cv-card" id="cv-zurich">
+  <h3>Zürich: 2020–2024</h3>
+  <p>
+    I studied Statistics for my master’s degree at
+    <a href="https://ethz.ch/en.html" target="_blank" rel="noopener noreferrer">
+      ETH Zurich
+    </a>.
+  </p>
+</div>
 
-        <button class="dot copenhagen" type="button" data-city="copenhagen" aria-label="København">
-          <span class="tooltip">København</span>
-        </button>
+<div class="cv-card" id="cv-copenhagen">
+  <h3>København: 2024–today</h3>
+  <p>
+    I am a PhD Candidate in Statistics at the
+    <a href="https://www.ku.dk/en" target="_blank" rel="noopener noreferrer">
+      University of Copenhagen
+    </a>.
+  </p>
+</div>
       </div>
 
       <div class="cv-info">
         <div class="cv-card" id="cv-freiburg">
-          <h3>Freiburg</h3>
-          <p>Add your Freiburg text here.</p>
+          <h3>Freiburg: 1995-2014</h3>
+          <p>I was born in Freiburg on October 6, 1995.</p>
         </div>
 
         <div class="cv-card" id="cv-koeln">
-          <h3>Köln</h3>
-          <p>Add your Köln text here.</p>
+          <h3>Köln: 2015-2019</h3>
+          <p>I studied Business and Economics for my bachelor’s degree at the University of Cologne https://uni-koeln.de/en/.</p>
         </div>
 
         <div class="cv-card" id="cv-zurich">
-          <h3>Zürich</h3>
-          <p>Add your Zürich text here.</p>
+          <h3>Zürich: 2020 - 2024</h3>
+          <p>I studied Statistics for my master’s degree at ETH Zurich https://ethz.ch/en.html.</p>
         </div>
 
         <div class="cv-card" id="cv-copenhagen">
-          <h3>København</h3>
-          <p>Add your Copenhagen text here.</p>
+          <h3>København: 2024 - today</h3>
+          <p>I am a PhD Candidate in Statistics at the University of Copenhagen https://www.ku.dk/en. </p>
         </div>
       </div>
     </div>
