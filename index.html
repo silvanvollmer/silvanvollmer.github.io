@@ -189,6 +189,11 @@
       color: var(--muted);
       font-size: 0.96rem;
     }
+    
+    .item-meta a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     footer {
       padding: 20px 0 48px;
@@ -307,17 +312,28 @@
       <div class="container">
         <div class="section-head">
           <h2>Talks & Posters</h2>
-          <div class="section-note">Conferences, workshops, seminars</div>
-        </div>
-        <ul class="clean-list">
-          <li>
-            <div class="item-title">Talk or poster title</div>
-            <div class="item-meta">Event name · City or Institution · 2026</div>
-          </li>
+          <div class="section-note"></div>
+          </div>
+          <ul class="clean-list">
+            <li>
+              <div class="item-title">
+                Talk:
+                <a href="https://www.youtube.com/watch?v=SDXaJHzZW6M" target="_blank" rel="noopener noreferrer">
+                  Single Proxy Identifiability of Causal Effect
+                </a>
+              </div>
+              <div class="item-meta">
+                Isaac Newton Institute · Cambridge ·
+                <a href="https://www.newton.ac.uk/event/cifw02/" target="_blank" rel="noopener noreferrer">
+                  CIFW02 workshop
+                </a>
+                · 2026
+              </div>
+            <!-- </li>
           <li>
             <div class="item-title">Second presentation title</div>
             <div class="item-meta">Conference or seminar · 2025</div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </section>
