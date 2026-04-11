@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV Map</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
       background: transparent;
+      overflow: hidden;
       font-family: Arial, sans-serif;
     }
 
-       .map-wrap {
+    .map-wrap {
       position: relative;
-      width: 100%;
-      max-width: 560px;
+      width: 560px;
+      max-width: 100%;
       margin: 0;
     }
 
@@ -55,12 +58,23 @@
       opacity: 1;
     }
 
-    /* placeholder positions */
     .freiburg   { left: 40%; top: 70%; }
     .koeln      { left: 30%; top: 57%; }
     .zurich     { left: 40%; top: 80%; }
     .copenhagen { left: 55%; top: 30%; }
   </style>
+</head>
+<body>
+  <div class="map-wrap">
+    <img src="europe.svg" alt="Europe map" />
+
+    <div class="dot freiburg"><span class="tooltip">Freiburg — add text</span></div>
+    <div class="dot koeln"><span class="tooltip">Köln — add text</span></div>
+    <div class="dot zurich"><span class="tooltip">Zürich — add text</span></div>
+    <div class="dot copenhagen"><span class="tooltip">København — add text</span></div>
+  </div>
+</body>
+</html>  </style>
 </head>
 <body>
   <div class="map-wrap">
