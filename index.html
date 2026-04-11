@@ -195,10 +195,26 @@
       text-underline-offset: 3px;
     }
 
-    .cv-map-wrap {
+   .cv-map-wrap {
       position: relative;
       width: 500px;
       max-width: 100%;
+      overflow: hidden;
+    }
+
+.cv-map-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(255, 255, 255, 0) 52%,
+          rgba(255, 255, 255, 0.18) 68%,
+          rgba(255, 255, 255, 0.55) 82%,
+          rgba(255, 255, 255, 0.92) 100%
+        );
     }
 
     .cv-map-image {
