@@ -6,13 +6,13 @@
   <title>Silvan Vollmer</title>
   <style>
     :root {
-    --bg: #ffffff;
-    --panel: #f4f4f5;
-    --text: #111111;
-    --muted: #52525b;
-    --line: #d4d4d8;
-    --accent: #111111;
-  }
+      --bg: #ffffff;
+      --panel: #f4f4f5;
+      --text: #111111;
+      --muted: #52525b;
+      --line: #d4d4d8;
+      --accent: #111111;
+    }
 
     * {
       box-sizing: border-box;
@@ -94,33 +94,10 @@
       max-width: 56ch;
       font-size: 1.06rem;
     }
+
     .lead a {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    }
-
-    .button-row,
-    .link-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button,
-    .social-link {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      color: var(--text);
-      padding: 12px 16px;
-      border-radius: 999px;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-    }
-
-    .button:hover,
-    .social-link:hover {
-      transform: translateY(-1px);
-      border-color: #3f3f46;
-      background: #18181d;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .icon-links {
@@ -145,7 +122,7 @@
     .icon-link:hover {
       transform: translateY(-1px);
       border-color: #3f3f46;
-      background: #18181d;
+      background: #e4e4e7;
     }
 
     .icon-link img {
@@ -155,8 +132,14 @@
       opacity: 0.92;
     }
 
-    .photo-wrap {
+    .desktop-photo {
+      justify-self: end;
       width: min(100%, 360px);
+    }
+
+    .mobile-photo {
+      display: none;
+      width: min(100%, 280px);
       margin: 20px 0 24px;
     }
 
@@ -196,6 +179,7 @@
       font-weight: 600;
       margin-bottom: 4px;
     }
+
     .item-title a {
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -222,9 +206,12 @@
         grid-template-columns: 1fr;
       }
 
-      .photo-wrap {
-        justify-self: start;
-        width: min(100%, 280px);
+      .desktop-photo {
+        display: none;
+      }
+
+      .mobile-photo {
+        display: block;
       }
     }
   </style>
@@ -234,30 +221,33 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div>
-          <div class="eyebrow">Hi there, I am </div>
+          <div class="eyebrow">Hi there, I am</div>
           <h1 style="font-size: 3rem;">Silvan Vollmer.</h1>
-        
-          <div class="photo-wrap">
+
+          <div class="mobile-photo">
             <img src="profile.png" alt="Portrait of Silvan Vollmer" />
           </div>
-        
+
           <p class="lead">
-            I am a PhD Candidate in Statistics at the <a href="https://cocala.github.io/" target="_blank" rel="noopener noreferrer">Copenhagen Causality Lab</a> 
-            of the <a href="https://www.math.ku.dk/english/research/spt/cocala/" target="_blank" rel="noopener noreferrer">University of Copenhagen</a> under the 
-            supervision of
-            <a href="https://sweichwald.de/" target="_blank" rel="noopener noreferrer">Sebastian Weichwald</a> and
-            <a href="https://niklaspfister.github.io/" target="_blank" rel="noopener noreferrer">Niklas Pfister</a>. 
+            I am a PhD Candidate in Statistics at the
+            <a href="https://cocala.github.io/" target="_blank" rel="noopener noreferrer">Copenhagen Causality Lab</a>
+            of the
+            <a href="https://www.math.ku.dk/english/research/spt/cocala/" target="_blank" rel="noopener noreferrer">University of Copenhagen</a>
+            under the supervision of
+            <a href="https://sweichwald.de/" target="_blank" rel="noopener noreferrer">Sebastian Weichwald</a>
+            and
+            <a href="https://niklaspfister.github.io/" target="_blank" rel="noopener noreferrer">Niklas Pfister</a>.
           </p>
+
           <p class="lead">
-            I am very much interested in causal inference methods 
-            and their application to real-world data. I am working on identifying and estimating causal effects under unobserved confounding using proxy variables. 
+            I am very much interested in causal inference methods and their application to real-world data.
+            I am working on identifying and estimating causal effects under unobserved confounding using proxy variables.
             If this topic interests you, feel free to reach out to me :)
           </p>
 
           <div class="icon-links" aria-label="External links">
             <a class="icon-link" href="mailto:sivo@math.ku.dk" aria-label="Email" title="Email">
-            <img src="icons/email.svg" alt="Email" />
+              <img src="icons/email.svg" alt="Email" />
             </a>
             <a class="icon-link" href="https://scholar.google.com/citations?user=TMZ75lUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
               <img src="icons/scholar.png" alt="Google Scholar" />
@@ -276,20 +266,12 @@
             </a>
           </div>
         </div>
+
+        <div class="desktop-photo">
+          <img src="profile.png" alt="Portrait of Silvan Vollmer" />
+        </div>
       </div>
     </section>
-
-    <!-- <section id="about">
-      <div class="container">
-        <div class="section-head">
-          <h2>Interests</h2>
-          <div class="section-note">Short focus areas</div>
-        </div>
-        <p>
-          Add 3–6 concise interest areas here. Keep this section compact and specific.
-        </p>
-      </div>
-    </section> -->
 
     <section id="publications">
       <div class="container">
@@ -312,8 +294,10 @@
                 Two decades of active surveillance for prostate cancer in a single-center cohort: favorable outcomes after transurethral resection of the prostate
               </a>
             </div>
-            <div class="item-meta">Hagmann, S., Ramakrishnan, V., Tamalunas, A., Hofmann, M., Vandenhirtz, M., 
-              Vollmer, S., Hug, J., Niggli, P., Nocito, A., Kubik-Huch, R. A., Lehmann, K., and Hefermehl, L. J. · Cancers · 2022</div>
+            <div class="item-meta">
+              Hagmann, S., Ramakrishnan, V., Tamalunas, A., Hofmann, M., Vandenhirtz, M.,
+              Vollmer, S., Hug, J., Niggli, P., Nocito, A., Kubik-Huch, R. A., Lehmann, K., and Hefermehl, L. J. · Cancers · 2022
+            </div>
           </li>
         </ul>
       </div>
