@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <title>Slides Presentation Icon</title>
+  <desc>Minimal black outline presentation board icon with a bar chart.</desc>
+
+  <g stroke="#231F20" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top hook -->
+    <path d="M244 63V38C244 24.2 255.2 13 269 13C282.8 13 294 24.2 294 38V63" />
+
+    <!-- Main board -->
+    <rect x="16" y="63" width="480" height="327" rx="32" fill="#FFFFFF" />
+
+    <!-- Stand legs -->
+    <path d="M205 390L154 483C147.5 494.8 132.7 499.1 120.9 492.6C109.1 486.1 104.8 471.3 111.3 459.5L150 390" />
+    <path d="M307 390L358 483C364.5 494.8 379.3 499.1 391.1 492.6C402.9 486.1 407.2 471.3 400.7 459.5L362 390" />
+
+    <!-- Chart bars -->
+    <rect x="136" y="224" width="51" height="118" fill="#FFFFFF" />
+    <line x1="136" y1="283" x2="187" y2="283" />
+
+    <rect x="231" y="163" width="51" height="179" fill="#FFFFFF" />
+    <line x1="231" y1="267" x2="282" y2="267" />
+
+    <rect x="326" y="96" width="51" height="246" fill="#FFFFFF" />
+    <line x1="326" y1="253" x2="377" y2="253" />
+  </g>
+</svg>
